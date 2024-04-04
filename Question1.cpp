@@ -1,71 +1,125 @@
 #include <iostream>
-#include "Question1.h"
+#include <string>
+#include <vector>
+#include <thread>
+#include <mutex>
+#include <algorithm>
+#include <memory>
 
-// Air Speed Sensor - Question 1.2
-void AirSpeedSensor::gatherData() const
-{
-    cout << "Gathering data from Air Speed Sensor." << endl;
-}
-void AirSpeedSensor::processData() const
-{
-    cout << "Processing data from Air Speed Sensor." << endl;
-}
+using namespace std;
 
-// Temperature Sensor - Question 1.2
-void TemperatureSensor::gatherData() const 
+// Question 1
+class Sensor 
 {
-    cout << "Gathering data from Temperature Sensor." << endl;
-}
-void TemperatureSensor::processData() const
-{
-    cout << "Processing data from Temperature Sensor." << endl;
-}
+    public:
+        virtual void gatherData() = 0;
+        virtual void processData() = 0;
+        virtual ~Sensor() {} // This is a destructor for the sensor class
+};
 
-// Pressure Sensor - Question 1.2
-void PressureSensor::gatherData() const
+class AirSpeedSensor : public Sensor 
 {
-    cout << "Gathering data from Pressure Sensor." << endl;
-}
+    public:
+        void gatherData() override 
+        {
+            // Print out to simulate data gathering process for temperature sensor
+            cout << "\nGathering data from Airspeed Sensor." << endl;
+        }
 
-void PressureSensor::processData() const
-{
-    cout << "Processing data from Pressure Sensor." << endl;
-}
+        void processData() override 
+        {
+            // Print out to simulate data processing for temperature sensor
+            cout << "Processing data from Airspeed Sensor." << endl;
+        }
+};
 
-Sensor* createSensor(const string& type)
+class TemperatureSensor : public Sensor 
 {
-    if (type == "Air Speed")
+    public:
+        void gatherData() override 
+        {
+            // Simulate data gathering process for pressure sensor
+            cout << "Gathering data from Temperature Sensor." << endl;
+        }
+
+        void processData() override 
+        {
+            // Simulate data processing for pressure sensor
+            cout << "Processing data from Temperature Sensor" << endl;
+        }
+};
+
+class PressureSensor : public Sensor
+{
+    public:
+        void gatherData() override
+        {
+            // Simulate data gathering process for position sensor
+            cout << "Gathering data from Pressure Sensor." << endl;
+        }
+
+        void processData() override
+        {
+            // Simulate data processing for position sensor
+            cout << "Processing data from Pressure Sensor." << endl;
+        }
+};
+
+class SensorFactory
+{
+    public:
+    static Sensor* createSensor(const string& type)
     {
-        return new AirSpeedSensor();
-    } 
-    else if (type == "Temperature")
-    {
-        return new TemperatureSensor();
+        if (type == "Air Speed")
+        {
+            return new AirSpeedSensor();
+        } 
+        else if (type == "Temperature")
+        {
+            return new TemperatureSensor();
+        }
+        else if (type == "Pressure")
+        {
+            return new PressureSensor();
+        } 
+        else
+        {
+            return nullptr; // This is if there is no correct sensor asked for
+        }
     }
-    else if (type == "Pressure")
-    {
-        return new PressureSensor();
-    } 
-    else
-    {
-        return nullptr; // This is if there is no correct sensor asked for
-    }
-}
+};
 
-
-void AerospaceControlSystem::addSensor(Sensor* sensor)
+class AerospaceControlSystem 
 {
-    sensors.push_back(sensor);
-}
+    private:
+        std::vector<Sensor*> sensors;
 
-void AerospaceControlSystem::monitorAndAdjust() 
+    public:
+        void addSensor(Sensor* sensor) {
+            sensors.push_back(sensor);
+        }
+
+        void monitorAndAdjust() {
+            for (Sensor* sensor : sensors) {
+                sensor->gatherData();
+                sensor->processData();
+                cout << "Adjusting controls based on sensor data." << endl;
+            }
+        }
+};
+
+
+int main() 
 {
-    for (Sensor* sensor: sensors)
-    {
-        sensor->gatherData();
-        sensor->processData();
-        cout << "Adjusting controls based on sensor data." << endl;
-    }
+    cout << "\n \n \nQUESTION 1: \n" << endl;
+        AerospaceControlSystem ctrlSys;
+
+            // Adding sensors
+            ctrlSys.addSensor(SensorFactory::createSensor("Air Speed"));
+            ctrlSys.addSensor(SensorFactory::createSensor("Temperature"));
+            ctrlSys.addSensor(SensorFactory::createSensor("Pressure"));
+
+            // Monitoring and adjusting
+            ctrlSys.monitorAndAdjust();
+    return 0;
 }
-
-
