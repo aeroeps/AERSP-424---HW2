@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named Question1
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+Question1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Question1
+.PHONY : Question1
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+Question1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1.dir/build.make CMakeFiles/Question1.dir/build
+.PHONY : Question1/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+Question1.o: Question1.cpp.o
+.PHONY : Question1.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+Question1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1.dir/build.make CMakeFiles/Question1.dir/Question1.cpp.o
+.PHONY : Question1.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+Question1.i: Question1.cpp.i
+.PHONY : Question1.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+Question1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1.dir/build.make CMakeFiles/Question1.dir/Question1.cpp.i
+.PHONY : Question1.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+Question1.s: Question1.cpp.s
+.PHONY : Question1.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+Question1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Question1.dir/build.make CMakeFiles/Question1.dir/Question1.cpp.s
+.PHONY : Question1.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Question1"
+	@echo "... Question1.o"
+	@echo "... Question1.i"
+	@echo "... Question1.s"
 .PHONY : help
 
 

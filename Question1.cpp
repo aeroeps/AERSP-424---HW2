@@ -111,7 +111,7 @@ class AerospaceControlSystem
 
 int main() 
 {
-    cout << "\n \n \nQUESTION 1: \n" << endl;
+    cout << "\n #########################  QUESTION 1: #########################\n" << endl;
         AerospaceControlSystem ctrlSys;
 
             // Adding sensors
