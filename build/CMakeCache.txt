@@ -23,6 +23,33 @@ AERSP242_HW2_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 AERSP242_HW2_SOURCE_DIR:STATIC=/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2
 
+//Value Computed by CMake
+AERSP424_Kadire_HW1_BINARY_DIR:STATIC=/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build
+
+//Value Computed by CMake
+AERSP424_Kadire_HW1_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+AERSP424_Kadire_HW1_SOURCE_DIR:STATIC=/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2
+
+//Value Computed by CMake
+AERSP424_Shifflett_HW1_BINARY_DIR:STATIC=/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build
+
+//Value Computed by CMake
+AERSP424_Shifflett_HW1_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+AERSP424_Shifflett_HW1_SOURCE_DIR:STATIC=/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2
+
+//Value Computed by CMake
+AERSP424_Shifflett_HW2_BINARY_DIR:STATIC=/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build
+
+//Value Computed by CMake
+AERSP424_Shifflett_HW2_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+AERSP424_Shifflett_HW2_SOURCE_DIR:STATIC=/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 

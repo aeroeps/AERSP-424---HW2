@@ -1,97 +1,100 @@
 #include <iostream>
-#include <thread>
-#include <mutex>
 #include <vector>
 #include <random>
+#include <thread>
+#include <mutex>
 #include <chrono> // Include chrono for time measurements
 
-std::mutex coutMutex;
-std::mutex ATCMutex;
+using namespace std;
 
-bool ATCSleeping = true;
-int aircraftInPattern = 0;
+mutex coutMutex;
+mutex ATCMutex;
+
+bool ATC_Sleeping = true;
+int numberOfAirplanes = 0;
 bool redirected = false;
-bool lastAirplaneLanded = false;
+bool lastPlane = false;
 
-void airplane(int number) {
+void airplane(int number) 
+{
     // Request to land
     {
-        std::unique_lock<std::mutex> lock(ATCMutex);
-        if (ATCSleeping) 
+        unique_lock<std::mutex> lock(ATCMutex);
+        if (ATC_Sleeping) 
         {
-            std::lock_guard<std::mutex> coutLock(coutMutex);
-            std::cout << "Airplane #" << number << " is establishing communication with the ATC." << std::endl;
-            ATCSleeping = false;
+            lock_guard<std::mutex> coutLock(coutMutex);
+            cout << "Airplane #" << number << " is establishing communication with the ATC." << endl;
+            ATC_Sleeping = false;
         }
-        if (aircraftInPattern >= 3 && !redirected) 
+        if (numberOfAirplanes >= 3 && !redirected) 
         {
-            std::lock_guard<std::mutex> coutLock(coutMutex);
-            std::cout << "Airplane #" << number << " requesting landing." << std::endl;
-            std::cout << "Approach pattern full. Airplane #" << number << " redirected to another airport." << std::endl;
+            lock_guard<std::mutex> coutLock(coutMutex);
+            cout << "Airplane #" << number << " requesting landing." << endl;
+            cout << "Approach pattern full. Airplane #" << number << " redirected to another airport." << endl;
             redirected = true;
             return;
         }
-        std::lock_guard<std::mutex> coutLock(coutMutex);
-        std::cout << "Airplane #" << number << " requesting landing." << std::endl;
-        std::cout << "Airplane #" << number << " is cleared to land." << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Simulate landing
-        aircraftInPattern++;
+        lock_guard<std::mutex> coutLock(coutMutex);
+        cout << "Airplane #" << number << " requesting landing." << endl;
+        cout << "Airplane #" << number << " is cleared to land." << endl;
+        this_thread::sleep_for(std::chrono::milliseconds(500)); // Simulate landing
+        numberOfAirplanes++;
     }
     
     // Land
-     std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Simulate landing
+     this_thread::sleep_for(std::chrono::milliseconds(500)); // Simulate landing
     
     // Remove from traffic pattern
     {
-        std::lock_guard<std::mutex> lock(ATCMutex);
-        aircraftInPattern--;
-        if (aircraftInPattern == 0) {
-            std::lock_guard<std::mutex> coutLock(coutMutex);
-            std::cout << "Runway is now free." << std::endl;
-            ATCSleeping = true;
+        lock_guard<std::mutex> lock(ATCMutex);
+        numberOfAirplanes--;
+        if (numberOfAirplanes == 0) {
+            lock_guard<std::mutex> coutLock(coutMutex);
+            cout << "Runway is now free." << endl;
+            ATC_Sleeping = true;
             redirected = false;
         }
     }
 
     // Check if this is the last airplane to land at this airport
     if (number == 10) {
-        lastAirplaneLanded = true;
+        lastPlane = true;
     }
 }
 
 int main() {
-    auto start = std::chrono::steady_clock::now(); // Start the timer
+    auto start = chrono::steady_clock::now(); // Start the timer
     
-    std::vector<std::thread> aircraftThreads;
+    vector<std::thread> aircraftThreads;
     
     for (int i = 1; i <= 10; ++i)
     {
         aircraftThreads.emplace_back(airplane, i);
-        std::random_device rd;
-        std::mt19937 gen(rd());
+        random_device rd;
+        mt19937 gen(rd());
     
         // Define the range
         int min = 0;
         int max = 2000;
     
         // Generate a random number between min and max (inclusive)
-        std::uniform_int_distribution<> dis(min, max);
+        uniform_int_distribution<> dis(min, max);
         int time = dis(gen);
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(time)); // Simulate landing
+        this_thread::sleep_for(std::chrono::milliseconds(time)); // Simulate landing
 
-    }
+    } 
 
-    
     // Join all threads
-    for (auto& thread : aircraftThreads) {
+    for (auto& thread : aircraftThreads) 
+    {
         thread.join();
     }
     
-    auto end = std::chrono::steady_clock::now(); // End the timer
-    std::chrono::duration<double> elapsed_seconds = end - start; // Calculate the duration
+    auto end = chrono::steady_clock::now(); // End the timer
+    chrono::duration<double> elapsed_seconds = end - start; // Calculate the duration
     
-    std::cout << "Program duration: " << elapsed_seconds.count() << " seconds." << std::endl;
+    cout << "Program duration: " << elapsed_seconds.count() << " seconds." << endl;
     
     return 0;
 }
