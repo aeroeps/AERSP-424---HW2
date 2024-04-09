@@ -1,1 +1,0 @@
-/usr/bin/clang++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Question1.cpp.dir/Question2.cpp.o CMakeFiles/Question1.cpp.dir/Question3.cpp.o -o Question1.cpp 

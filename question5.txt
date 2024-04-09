@@ -1,0 +1,13 @@
+This is in response to what was asked about Question 2:
+
+From Question 2, what issues may happen if the robot that finished the
+task is assigned a new task immediately? And what will be the potential?
+solution for the issues?
+
+The problem would arise if you were to make the robot immediately go to the next task it would never put the tools down for the task that it was doing. What would end up happening 
+is that the robot would not be able to complete the next task because it would have tools that were not meant for the next task in its hand and be unable to pick up the tools for 
+the new task. The solution to this is to add a condition that makes it so that the robot first returns the tools before starting the new task. 
+
+
+
+

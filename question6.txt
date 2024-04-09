@@ -1,0 +1,16 @@
+From Question 3, what issues you might obtain during the development of the program?
+What issues do you think will happen if some of the actions,
+e.g., waking up the ATC, checking the traffic pattern, entering the traffic
+pattern, diverging to another airport, etc., take time to finish? 
+And what will be a potential solution for the issues?
+
+One of the issues that I had while working on question 3 where the problem with the runway not becoming full. The way that I went about doing this was by using 
+a counter to count the number of planes on the runway but this led to the problem that there were very few times when there was more than 3 planes on the runway and sometimes
+there never was a situation where planes had to be redirected. 
+
+If the actions were to take the actual time needed the program would run a lot longer than it does. Furthermore, there would be the problem that all of the planes would be redirected
+all of the time. This is because the first few planes would take too long to land and the program was sending all of the planes at once after the first three the others would be 
+all redirected to another airport. I tried fixing this by adding some time between when the planes came in. 
+
+
+
