@@ -1,10 +1,13 @@
 #include <iostream>
+
 #include <string>
 #include <vector>
-#include <thread>
-#include <mutex>
 #include <algorithm>
 #include <memory>
+
+#include <thread>
+#include <mutex>
+
 
 using namespace std;
 
@@ -22,13 +25,13 @@ class AirSpeedSensor : public Sensor
     public:
         void gatherData() override 
         {
-            // Print out to simulate data gathering process for temperature sensor
+            // Simulate data gathering process for temperature sensor
             cout << "\nGathering data from Airspeed Sensor." << endl;
         }
 
         void processData() override 
         {
-            // Print out to simulate data processing for temperature sensor
+            // Simulate data processing for temperature sensor
             cout << "Processing data from Airspeed Sensor." << endl;
         }
 };

@@ -1,8 +1,8 @@
-#include <cmath>
-#include <vector>
 #define GL_SILENCE_DEPRECATION // Used new GL library for my Mac
 #include <GLUT/glut.h> 
-
+#include <iostream>
+#include <cmath>
+#include <vector>
 
 
 // Function for drag coefficient with respect to alfa

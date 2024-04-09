@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.23) # Specify CMake version.
 add_executable(Question1 Question1.cpp)
+add_executable(Question2 Question2.cpp)
+add_executable(Question3 Question3.cpp)
+add_executable(Question4 Question4.cpp)
+
 project(AERSP424_Shifflett_HW2) # A project name. This can be anything.
 set(CMAKE_CXX_STANDARD 20) # Specify C++ version.
 # Accessing CMake variables can be done using ${VARIABLE_NAME}.
