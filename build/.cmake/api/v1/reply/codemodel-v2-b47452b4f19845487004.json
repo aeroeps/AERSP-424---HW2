@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AERSP424_Shifflett_HW2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Question1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Question1-Debug-79b9ebf220682f6d3897.json",
+					"name" : "Question1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Question2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Question2-Debug-bf729565633baafd00dd.json",
+					"name" : "Question2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Question3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Question3-Debug-6d4d50bef88ae7b96698.json",
+					"name" : "Question3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Question4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Question4-Debug-81e66a3cff5c02ab1dfe.json",
+					"name" : "Question4",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build",
+		"source" : "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

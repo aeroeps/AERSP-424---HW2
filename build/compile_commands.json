@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build",
+  "command": "/usr/bin/clang++  -I\"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/include\" -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6 -o CMakeFiles/Question1.dir/Question1.cpp.o -c \"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question1.cpp\"",
+  "file": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question1.cpp",
+  "output": "CMakeFiles/Question1.dir/Question1.cpp.o"
+},
+{
+  "directory": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build",
+  "command": "/usr/bin/clang++  -I\"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/include\" -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6 -o CMakeFiles/Question2.dir/Question2.cpp.o -c \"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question2.cpp\"",
+  "file": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question2.cpp",
+  "output": "CMakeFiles/Question2.dir/Question2.cpp.o"
+},
+{
+  "directory": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build",
+  "command": "/usr/bin/clang++  -I\"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/include\" -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6 -o CMakeFiles/Question3.dir/Question3.cpp.o -c \"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question3.cpp\"",
+  "file": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question3.cpp",
+  "output": "CMakeFiles/Question3.dir/Question3.cpp.o"
+},
+{
+  "directory": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/build",
+  "command": "/usr/bin/clang++  -I\"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/include\" -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.6 -o CMakeFiles/Question4.dir/Question4.cpp.o -c \"/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question4.cpp\"",
+  "file": "/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question4.cpp",
+  "output": "CMakeFiles/Question4.dir/Question4.cpp.o"
+}
+]

@@ -5,7 +5,7 @@
 #include <vector>
 
 
-// Function for drag coefficient with respect to alfa
+// Function for drag coefficient with respect to alpha
 double computeCD(double Alpha) 
 {
     double eps = 1.0 / 1.0; 

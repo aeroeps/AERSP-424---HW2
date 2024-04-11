@@ -1,0 +1,10 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/elijahshifflett/Desktop/Penn State /Spring 2024/AERSP 424/AERSP424_HW2/Question4'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z9computeCDd, symObjAddr: 0x0, symBinAddr: 0x100003BE0, symSize: 0xA0 }
+  - { offsetInCU: 0x46, offset: 0x46, size: 0x8, addend: 0x0, symName: __Z3powB7v160006IdiENSt3__19enable_ifIXaasr3std13is_arithmeticIT_EE5valuesr3std13is_arithmeticIT0_EE5valueENS0_9__promoteIS2_S3_vEEE4type4typeES2_S3_, symObjAddr: 0xA0, symBinAddr: 0x100003C80, symSize: 0x30 }
+  - { offsetInCU: 0x2D53, offset: 0x2D53, size: 0x8, addend: 0x0, symName: __Z9computeCDd, symObjAddr: 0x0, symBinAddr: 0x100003BE0, symSize: 0xA0 }
+  - { offsetInCU: 0x2D9B, offset: 0x2D9B, size: 0x8, addend: 0x0, symName: __Z7displayv, symObjAddr: 0xD0, symBinAddr: 0x100003CB0, symSize: 0x190 }
+  - { offsetInCU: 0x2DED, offset: 0x2DED, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x260, symBinAddr: 0x100003E40, symSize: 0x6A }
+...
