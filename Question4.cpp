@@ -1,5 +1,5 @@
 #define GL_SILENCE_DEPRECATION // Used new GL library for my Mac
-#include <GLUT/glut.h> 
+#include <GLUT/glut.h> // This is for mac
 #include <iostream>
 #include <cmath>
 // #include <GL/glut.h> // use if running from windows
