@@ -2,6 +2,7 @@
 #include <GLUT/glut.h> 
 #include <iostream>
 #include <cmath>
+// #include <GL/glut.h> // use if running from windows
 #include <vector>
 
 
